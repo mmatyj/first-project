@@ -2,6 +2,7 @@
 @import "normalize";
 @import "layout";
 @import "mixins";
+@import "grid";
 
 * {
     margin: 0;
@@ -72,7 +73,7 @@ body {
 
             &:last-child {
                 padding-bottom: 40px;
-                border-bottom: 1px solid $font-color;
+                border-bottom: 1px solid $color-body;
             }
 
 
@@ -160,12 +161,176 @@ body {
         display: flex;
         flex-direction: column;
 
-        .panel {
+        .panel1 {
             background-color: #fff;
             margin: 18px 18px 9px;
             flex-basis: 100%;
             flex: 1 1 auto;
 
+            .g-statistic {
+                color: $font-color;
+                font-size: 16px;
+                padding: 10px 20px;
+                border-bottom: 1px solid $color-body;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .calendar {
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+                padding: 40px;
+                border-bottom: 1px solid $color-body;
+
+                i {
+                    color: $grey;
+                }
+
+                .i-refresh {
+                    height: 40px;
+                    width: 40px;
+                    background-color: $color-orange;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-left: 10px;
+                    border-radius: 3px;
+
+                    i {
+                        color: white;
+                    }
+                }
+
+                .date {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid $font-color;
+                    border-radius: 3px;
+                    width: 400px;
+                    height: 40px;
+
+
+                    div {
+                        width: 50%;
+                        height: 35px;
+                        padding: 10px;
+                    }
+
+                    .i-calendar {
+                        display: flex;
+                        justify-content: space-between;
+                        border-left: 1px solid $font-color;
+                    }
+                }
+
+
+            }
+
+            .gs-data {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+
+                .gs-row {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 80%;
+                    margin: 10px;
+
+                    .grey {
+                        color: $font-color;
+                        font-weight: bold;
+                    }
+
+                    .gs-lines {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 300px;
+                        border-bottom: 1px solid $color-body;
+                    }
+
+
+                }
+
+                .last-line {
+                    margin-top: 60px;
+                }
+            }
+
+            .gs-chart {
+                display: flex;
+                justify-content: center;
+                margin: 20px;
+
+
+
+                div {
+                    background-color: $color-body;
+                    margin: 0 20px;
+                    padding: 5px 20px;
+                    display: flex;
+                    align-content: center;
+                    justify-content: space-around;
+                    color: $font-color;
+
+                    &:last-child {
+                        background-color: white;
+                    }
+
+                    p {
+                        padding: 5px;
+                    }
+
+                    .circle {
+                        width: 10px;
+                        height: 10px;
+                        background-color: orange;
+                        border-radius: 50%;
+                        padding: 10px;
+                        margin: 5px 20px 5px 10px;
+                    }
+
+                    .first-circle {
+                        background-color: #80BFCA;
+                    }
+
+                    .last-circle {
+                        background-color: #59B66D;
+                    }
+                }
+
+            }
+
+
+
         }
+
+        .chart {
+            display: block;
+            margin: 0 auto;
+        }
+
+
     }
+
+    .panel2 {
+        background-color: #fff;
+        margin: 18px 18px 9px;
+        flex-basis: 100%;
+        flex: 1 1 auto;
+
+        .links {
+            color: $font-color;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-bottom: 1px solid $color-body;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        button {}
+    }
+
 }
