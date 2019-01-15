@@ -19,66 +19,68 @@ body {
 
 // SIDEBAR 
 .sidebar {
-    flex-basis: 16%;
+    flex-basis: 250px;
     background-color: $color-nav;
+
+    //  LOGO AND HAMBURGER
 
     .logo {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            max-width: 80%;
-
+            min-width: 80%;
+            margin: 10px 20px 10px 10px;
         }
 
-        .fas {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        .hamburger {
             color: $font-color;
             font-size: 25px;
+            margin: 15px 20px;
         }
     }
 
-    ul {
+    // SIDEBAR-LINKS
+
+    .sidebar-links {
         display: flex;
         flex-direction: column;
         list-style: none;
-        padding-top: 60px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $color-body;
 
         li {
             flex-basis: 40px;
-
-
-            .sidebar-icon {
-                color: $font-color;
-                padding: 10px;
-                line-height: 30px;
-            }
 
             a {
                 display: block;
                 text-decoration: none;
                 color: $font-color;
                 padding: 10px;
+                border-left: 2px solid transparent;
 
                 &:hover {
                     color: white;
                     background-color: $color-nav-hover;
-                    border-left: 2px solid orange;
+                    border-color: orange;
+
+                    i {
+                        color: white;
+                    }
+                }
+
+                i {
+                    color: $font-color;
+                    padding: 10px;
+                    line-height: 30px;
                 }
             }
-
-            &:last-child {
-                padding-bottom: 40px;
-                border-bottom: 1px solid $color-body;
-            }
-
-
         }
     }
+
+    // CHAT WITH MANAGER
 
     .chat {
         text-align: center;
@@ -88,22 +90,44 @@ body {
             color: $font-color;
             text-transform: uppercase;
             font-weight: bold;
+            padding-top: 10px;
         }
 
-        .manager {
+        .people {
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    position: relative;
+                    margin: 15px;
 
-            img {
-                float: left;
-                border-radius: 50%;
-                height: 45px;
-                width: 45px;
-                margin: 15px;
-            }
+                    img {
+                        border-radius: 50%;
+                        height: 45px;
+                        width: 45px;
+                        object-fit: cover;
+                        margin: 0 20px;
+                    }
 
-            p {
-                float: left;
-                color: #56819f;
-                margin-top: 22px;
+                    p {
+                        color: #56819f;
+                        margin-left: 10px;
+                    }
+                }
+
+                a.active {
+                    &:before {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: $active;
+                        position: absolute;
+                        top: 0;
+                        left: 54px;
+                    }
+                }
             }
         }
     }
@@ -127,6 +151,7 @@ body {
         justify-content: flex-end;
         align-items: center;
         color: $font-color;
+        font-size: 16px;
 
         div {
             text-align: center;
@@ -135,7 +160,7 @@ body {
 
             i {
                 padding: 10px;
-                font-size: 20px;
+                font-size: 18px;
             }
 
 
@@ -149,6 +174,19 @@ body {
 
             P {
                 color: #56819f;
+            }
+        }
+
+        div.notification {
+            &:before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color-orange;
+                position: absolute;
+                top: 0;
+                left: 0px;
             }
         }
     }
@@ -329,8 +367,5 @@ body {
             text-transform: uppercase;
             font-weight: bold;
         }
-
-        button {}
     }
-
 }
