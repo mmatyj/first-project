@@ -1,0 +1,14 @@
+.orange-button {
+    text-align: center;
+    margin-top: 20px;
+
+    button {
+        height: 35px;
+        width: 125px;
+        background-color: $color-orange;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        margin: 0 auto;
+    }
+}

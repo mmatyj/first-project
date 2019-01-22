@@ -1,0 +1,10 @@
+// NAGŁÓWEK PANELU
+
+.panel-heading {
+    color: $font-color;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-bottom: 1px solid $color-body;
+    text-transform: uppercase;
+    font-weight: bold;
+}

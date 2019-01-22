@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="sidebar">
+    <div class="sidebar">
         <div class="logo">
             <a href="#">
                 <img src="images/logo.png" alt="">
@@ -50,7 +50,7 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </div>
     <section class="main">
         <div class="topbar">
             <div class="topbar-menu">
@@ -67,11 +67,9 @@
             </div>
             <div><i class="icon-quit"></i></div>
         </div>
-
-
         <div class="content">
-            <div class="panel1">
-                <div class="g-statistic">General statistic</div>
+            <div class="panel">
+                <div class="panel-heading">General statistic</div>
                 <div class="calendar">
                     <div class="date">
                         <div>16.05.2018</div>
@@ -80,7 +78,7 @@
                             <i class="icon-calendar"></i>
                         </div>
                     </div>
-                    <div class="i-refresh"><i class="icon-refresh"></i></div>
+                    <div class="button"><i class="icon-refresh"></i></div>
                 </div>
                 <div class="gs-data">
                     <div class="gs-row">
@@ -121,57 +119,122 @@
                         <p>Earned</p>
                     </div>
                 </div>
-                <img class="chart" src="images/chart.svg" alt="">
+                <img class="chart" src="images/chart.png" alt="">
             </div>
-        </div>
-        <div class="panel2">
-            <div class="links">Links</div>
-            <button class="add">+ add new</button>
-            <div class="links-table">
-                <table>
-                    <tr>
-                        <th>Home page</th>
-                        <th><a href="#">https://www.homepage.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Currently offer</th>
-                        <th><a href="#">https://www.currently.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Blurpix</th>
-                        <th><a href="#">https://www.blurpix.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Your site</th>
-                        <th><a href="#">https://www.yoursite.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Google</th>
-                        <th><a href="#">https://www.google.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Facebook</th>
-                        <th><a href="#">https://www.facebook.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Dashboard</th>
-                        <th><a href="#">https://www.dashboard.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Blurax</th>
-                        <th><a href="#">https://www.Blurax.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Piece of Wine</th>
-                        <th><a href="#">https://www.pieceofwine.com</a></th>
-                    </tr>
-                    <tr>
-                        <th>Twitter</th>
-                        <th><a href="#">https://www.twitter.com</a></th>
-                    </tr>
-                </table>
+            <div class="panel">
+                <div class="panel-heading">Links</div>
+                <div class="orange-button">
+                    <button>+ add new</button>
+                </div>
+                <div class="table">
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Home page</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.homepage.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Currently offer</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.currently.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Blurpix</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.blurpix.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Your site</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.yoursite.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Google</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.google.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Facebook</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.facebook.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Dashboard</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.dashboard.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Blurax</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.blurax.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Piece of Wine</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.pieceofwine.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-center">
+                        <div class="grey-col col-xl-5">Twitter</div>
+                        <div class="link-col col-xl-6">
+                            <a href="#">https://www.twitter.com</a>
+                            <div class="icons-hover">
+                                <a href="#"><i class="orange icon-links"></i></a>
+                                <a href="#"><i class="icon-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="orange-button">
+                    <button>+ add new</button>
+                </div>
+
+
+
             </div>
-        </div>
         </div>
     </section>
 </body>

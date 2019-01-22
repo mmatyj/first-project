@@ -3,6 +3,12 @@
 @import "layout";
 @import "mixins";
 @import "grid";
+@import "sections/sidebar";
+@import "sections/topbar";
+@import "components/panel-heading";
+@import "components/calendar";
+@import "components/orange-button";
+@import "components/table";
 
 * {
     margin: 0;
@@ -13,126 +19,12 @@
 body {
     display: flex;
     background-color: $color-body;
-    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
-// SIDEBAR 
-.sidebar {
-    flex-basis: 250px;
-    background-color: $color-nav;
 
-    //  LOGO AND HAMBURGER
-
-    .logo {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        img {
-            min-width: 80%;
-            margin: 10px 20px 10px 10px;
-        }
-
-        .hamburger {
-            color: $font-color;
-            font-size: 25px;
-            margin: 15px 20px;
-        }
-    }
-
-    // SIDEBAR-LINKS
-
-    .sidebar-links {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding-bottom: 40px;
-        border-bottom: 1px solid $color-body;
-
-        li {
-            flex-basis: 40px;
-
-            a {
-                display: block;
-                text-decoration: none;
-                color: $font-color;
-                padding: 10px;
-                border-left: 2px solid transparent;
-
-                &:hover {
-                    color: white;
-                    background-color: $color-nav-hover;
-                    border-color: orange;
-
-                    i {
-                        color: white;
-                    }
-                }
-
-                i {
-                    color: $font-color;
-                    padding: 10px;
-                    line-height: 30px;
-                }
-            }
-        }
-    }
-
-    // CHAT WITH MANAGER
-
-    .chat {
-        text-align: center;
-        padding-top: 10px;
-
-        p:first-child {
-            color: $font-color;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding-top: 10px;
-        }
-
-        .people {
-            li {
-                a {
-                    display: flex;
-                    align-items: center;
-                    text-decoration: none;
-                    position: relative;
-                    margin: 15px;
-
-                    img {
-                        border-radius: 50%;
-                        height: 45px;
-                        width: 45px;
-                        object-fit: cover;
-                        margin: 0 20px;
-                    }
-
-                    p {
-                        color: #56819f;
-                        margin-left: 10px;
-                    }
-                }
-
-                a.active {
-                    &:before {
-                        content: '';
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        background-color: $active;
-                        position: absolute;
-                        top: 0;
-                        left: 54px;
-                    }
-                }
-            }
-        }
-    }
-
-}
 
 // MAIN PART
 .main {
@@ -141,56 +33,6 @@ body {
     flex-direction: column;
     align-self: stretch;
 
-    // TOPBAR
-
-    .topbar {
-        background-color: white;
-        flex-basis: 62px;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        color: $font-color;
-        font-size: 16px;
-
-        div {
-            text-align: center;
-            border-left: 0.5px solid $font-color;
-            padding: 20px 10px;
-
-            i {
-                padding: 10px;
-                font-size: 18px;
-            }
-
-
-        }
-
-        div.topbar-menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-
-            P {
-                color: #56819f;
-            }
-        }
-
-        div.notification {
-            &:before {
-                content: '';
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $color-orange;
-                position: absolute;
-                top: 0;
-                left: 0px;
-            }
-        }
-    }
-
     // CONTENT
 
     .content {
@@ -198,72 +40,15 @@ body {
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
+        margin-top: 80px;
 
-        .panel1 {
+        .panel {
             background-color: #fff;
-            margin: 18px 18px 9px;
+            margin: 18px auto;
             flex-basis: 100%;
             flex: 1 1 auto;
 
-            .g-statistic {
-                color: $font-color;
-                font-size: 16px;
-                padding: 10px 20px;
-                border-bottom: 1px solid $color-body;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-
-            .calendar {
-                display: flex;
-                justify-content: center;
-                font-size: 14px;
-                padding: 40px;
-                border-bottom: 1px solid $color-body;
-
-                i {
-                    color: $grey;
-                }
-
-                .i-refresh {
-                    height: 40px;
-                    width: 40px;
-                    background-color: $color-orange;
-                    text-align: center;
-                    line-height: 40px;
-                    margin-left: 10px;
-                    border-radius: 3px;
-
-                    i {
-                        color: white;
-                    }
-                }
-
-                .date {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    border: 1px solid $font-color;
-                    border-radius: 3px;
-                    width: 400px;
-                    height: 40px;
-
-
-                    div {
-                        width: 50%;
-                        height: 35px;
-                        padding: 10px;
-                    }
-
-                    .i-calendar {
-                        display: flex;
-                        justify-content: space-between;
-                        border-left: 1px solid $font-color;
-                    }
-                }
-
-
-            }
+            // TE TAKIE DANE I LICZBY
 
             .gs-data {
                 display: flex;
@@ -296,6 +81,8 @@ body {
                     margin-top: 60px;
                 }
             }
+
+            // LEGENDA WYKRESU
 
             .gs-chart {
                 display: flex;
@@ -341,31 +128,60 @@ body {
 
             }
 
+            // WYKRES
+
+            .chart {
+                display: block;
+                margin: 40px auto;
+            }
 
 
         }
-
-        .chart {
-            display: block;
-            margin: 0 auto;
-        }
-
 
     }
 
-    .panel2 {
-        background-color: #fff;
-        margin: 18px 18px 9px;
-        flex-basis: 100%;
-        flex: 1 1 auto;
 
-        .links {
-            color: $font-color;
-            font-size: 16px;
-            padding: 10px 20px;
-            border-bottom: 1px solid $color-body;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
+}
+
+@media (max-width: 550px) {
+    .topbar {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 65px;
+
     }
+
+}
+
+@media (max-width: 770px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .topbar {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 65px;
+
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 65px;
+        overflow: hidden;
+        min-height: 0%;
+    }
+
+    // nie działa
+    .panel {
+        margin: 20px auto;
+    }
+
 }

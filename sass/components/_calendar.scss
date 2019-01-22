@@ -1,0 +1,49 @@
+// KALENDARZ
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    padding: 40px;
+    border-bottom: 1px solid $color-body;
+
+
+    .date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $font-color;
+        border-radius: 3px;
+        width: 400px;
+        height: 40px;
+
+
+        div {
+            width: 50%;
+            height: 35px;
+            padding: 10px;
+        }
+
+        .i-calendar {
+            display: flex;
+            justify-content: space-between;
+            border-left: 1px solid $font-color;
+        }
+    }
+
+    .button {
+        height: 40px;
+        width: 40px;
+        background-color: $color-orange;
+        text-align: center;
+        line-height: 40px;
+        margin-left: 10px;
+        border-radius: 3px;
+
+        i {
+            color: white;
+        }
+    }
+
+
+}
