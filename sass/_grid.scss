@@ -31,10 +31,10 @@ $columnsNumber: 12;
 
 @each $prefix,
 $minWidth in ('xs', null),
-('sm', 541),
-('md', 787),
-('lg', 991),
-('xl', 1201) {
+('sm', 541px),
+('md', 787px),
+('lg', 991px),
+('xl', 1201px) {
     @if $minWidth {
         @media (max-width: $minWidth) {
             @include makeGrid($prefix);

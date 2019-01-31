@@ -1,0 +1,37 @@
+.form {
+    margin: auto;
+
+    .parts {
+        margin: 40px auto;
+        border-bottom: 1px solid $border-color;
+
+        .row {
+            margin: 0 auto 15px;
+            width: 50%;
+
+            label {
+                width: 30%;
+                margin-right: 25px;
+                color: $font-color;
+                font-weight: bold;
+            }
+
+            input {
+                width: 60%;
+                height: 38px;
+                padding: 15px;
+                font-size: 15px;
+                border-radius: 3px;
+                border: 1px solid $border-color;
+            }
+
+            &:last-child {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    button {
+        width: 95px;
+    }
+}
