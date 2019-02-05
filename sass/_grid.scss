@@ -36,7 +36,7 @@ $minWidth in ('xs', null),
 ('lg', 991px),
 ('xl', 1201px) {
     @if $minWidth {
-        @media (max-width: $minWidth) {
+        @media (min-width: $minWidth) {
             @include makeGrid($prefix);
         }
     }
